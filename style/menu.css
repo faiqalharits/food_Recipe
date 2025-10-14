@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Reset CSS */
+body {
+    background-color: #FDFFE7;
+}
+
+
+.user-icons i {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Header Menu */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.hero-content {
+    max-width: 50%;
+    margin-left: 70px;
+}
+
+
+.hero-content h2 {
+    font-size: 24px;
+    color: #6c8c3f;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.price-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    background: #ff5a5f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e14e50;
+}
+
+.hero-image img {
+    max-width: 450px;
+}
+
+/* Filter Buttons */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.filter-container img {
+    width: 20px;
+    height: 20px;
+}
+
+.filter-container button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.filter-container button i {
+    position: absolute;
+    left: -25px;
+    font-size: 20px;
+    color: #888;
+}
+
+.filter-container button.active,
+.filter-container button:hover {
+    color: red;
+}
+
+/* Menu Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.menu-caption {
+    padding: 20px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Pastikan semua card sama rata */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item .details {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.menu-item p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu-item .detail-button {
+    display: inline-block;
+    background: red;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.menu-item .detail-button:hover {
+    background: darkred;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Detail Page */
+#detail-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#detail-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#detail-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#detail-container a:hover {
+    background-color: #0056b3;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.header {
+    background-color: #FBF3D1;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.8em;
+    color: #2d5446;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #5a7365;
+    font-style: italic;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.content {
+    padding: 50px 40px;
+}
+
+.recipe-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.info-item {
+    text-align: center;
+    padding: 35px 25px;
+    background-color: white;
+    border-radius: 12px;
+    border: 2px solid #e8dcc8;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(45, 84, 70, 0.15);
+    border-color: #f9b44a;
+}
+
+.info-label {
+    font-size: 0.85em;
+    color: #7a8b82;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-value {
+    font-size: 1.5em;
+    color: #2d5446;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .recipe-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #2d5446;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #f9b44a;
+    font-weight: 400;
+}
+
+.ingredients-list {
+    list-style: none;
+    background-color: #faf8f5;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #2d5446;
+}
+
+.ingredients-list li {
+    padding: 12px 0;
+    padding-left: 35px;
+    position: relative;
+    font-size: 1.05em;
+    color: #2d5446;
+}
+
+.ingredients-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #2d5446;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.steps-list {
+    list-style: none;
+    counter-reset: step-counter;
+}
+
+.steps-list li {
+    counter-increment: step-counter;
+    padding: 25px;
+    padding-left: 80px;
+    margin-bottom: 20px;
+    background-color: #faf8f5;
+    border-radius: 10px;
+    position: relative;
+    font-size: 1.05em;
+    color: #2d5446;
+}
+
+.steps-list li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    width: 40px;
+    height: 40px;
+    background-color: #f9b44a;
+    color: #2d5446;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.notes-section {
+    background-color: #e8f5e9;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #2d5446;
+}
+
+.notes-section h3 {
+    color: #2d5446;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.notes-list {
+    list-style: none;
+}
+
+.notes-list li {
+    padding: 10px 0;
+    padding-left: 35px;
+    position: relative;
+    color: #2d5446;
+    font-size: 1.05em;
+}
+
+.notes-list li::before {
+    content: '💡';
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+.back-btn {
+    display: inline-block;
+    background-color: #FBF3D1;
+    color: black;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: 1.3s;
+}
+
+.back-btn:hover {
+    border: 1px black solid;
+
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .content {
+        padding: 30px 20px;
+    }
+
+    .recipe-image {
+        height: 300px;
+    }
+
+    .steps-list li {
+        padding-left: 70px;
+    }
+
+    .steps-list li::before {
+        left: 20px;
+    }
+}
